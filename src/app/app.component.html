@@ -1,7 +1,9 @@
-<input [(ngModel)]=text>
-<p>{{text}}</p>
-<input type='checkbox' [(ngModel)]=chcbox>
-
-<div *ngIf="chcbox">
-  <app-input [text]=text></app-input>
+<div class="all">
+  <input [(ngModel)]=text style="color:tan">
+  <p style="border: 2px solid greenyellow; width: max-content;">{{text}}</p>
+  <input type='checkbox' [(ngModel)]=chcbox>
 </div>
+  <div *ngIf="chcbox">
+    <app-input [text]=text></app-input>
+  </div>
+

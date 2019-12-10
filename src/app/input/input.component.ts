@@ -5,14 +5,13 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck } from '@an
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css'],
-  template: `<h2>Дитя</h2>
-    {{ text }}
-  `
 })
 // tslint:disable-next-line: max-line-length
-export class InputComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, DoCheck  {
-  @Input() text: number;
-  constructor() { }
+export class InputComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, DoCheck {
+  @Input() text: string;
+  constructor() {
+    console.log('Constructor');
+  }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log('OnChanges');
@@ -20,7 +19,7 @@ export class InputComponent implements OnInit, OnChanges, AfterContentInit, Afte
   ngOnInit() {
     console.log('OnInit');
   }
-  ngDoCheck(){
+  ngDoCheck() {
     console.log('DoCheck')
   }
   ngAfterContentInit() {
