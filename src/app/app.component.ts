@@ -7,38 +7,15 @@ import { Component, OnInit, OnChanges, AfterContentInit, AfterContentChecked, Af
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  template: `
-        <input [(ngModel)]=text>
 
-        <app-input [text]=text></app-input>` ,
 })
 // tslint:disable-next-line: max-line-length
-export class AppComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+export class AppComponent implements OnInit {
   constructor() {
   }
   title = 'hek';
   text = 'Привет';
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes');
-  }
-  ngAfterContentInit() {
-
-  }
-  ngAfterContentChecked() {
-
-  }
-  ngAfterViewInit() {
-
-  }
-  ngAfterViewChecked() {
-
-  }
   ngOnInit() {
-    console.log('hell na');
-  }
-  ngOnDestroy() {
-
   }
 }
 

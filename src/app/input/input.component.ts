@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
 
+// tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
@@ -8,13 +9,35 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
     {{ text }}
   `
 })
-export class InputComponent implements OnInit, OnChanges {
+// tslint:disable-next-line: max-line-length
+export class InputComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, DoCheck  {
   @Input() text: number;
   constructor() { }
 
-  ngOnInit() {
-  }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log('changes');
+    console.log('OnChanges');
   }
+  ngOnInit() {
+    console.log('OnInit');
+  }
+  ngDoCheck(){
+    console.log('DoCheck')
+  }
+  ngAfterContentInit() {
+    console.log('AfterContentInit');
+  }
+  ngAfterContentChecked() {
+    console.log('AfterContentChecked');
+  }
+  ngAfterViewInit() {
+    console.log('AfterViewInit');
+  }
+  ngAfterViewChecked() {
+    console.log('AfterViewChecked');
+  }
+
+  ngOnDestroy() {
+    console.log('OnDestroy');
+  }
+
 }

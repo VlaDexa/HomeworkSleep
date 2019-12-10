@@ -1,2 +1,7 @@
-{{b}}
-<router-outlet></router-outlet>
+<input [(ngModel)]=text>
+<p>{{text}}</p>
+<input type='checkbox' [(ngModel)]=chcbox>
+
+<div *ngIf="chcbox">
+  <app-input [text]=text></app-input>
+</div>
