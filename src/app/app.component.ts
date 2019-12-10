@@ -1,5 +1,5 @@
 // tslint:disable-next-line: max-line-length
-import { Component, OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy, Input, SimpleChanges } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 // tslint:disable-next-line: no-conflicting-lifecycle
 
 // tslint:disable-next-line: no-conflicting-lifecycle
@@ -15,8 +15,15 @@ export class AppComponent implements OnInit {
   }
   title = 'hek';
   text = 'Привет';
+  chcboxe = 1;
+
+  chcbox = 0;
   ngOnInit() {
+
   }
+scnd() {
+  this.chcbox--;
+}
 }
 
 
