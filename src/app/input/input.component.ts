@@ -1,15 +1,15 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-input',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.css'],
-  template: `<h2>Child Component</h2>
-    current count is {{ count }}
+  template: `<h2>Дитя</h2>
+    {{ text }}
   `
 })
 export class InputComponent implements OnInit, OnChanges {
-  @Input() count: number;
+  @Input() text: number;
   constructor() { }
 
   ngOnInit() {

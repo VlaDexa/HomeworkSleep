@@ -8,24 +8,17 @@ import { Component, OnInit, OnChanges, AfterContentInit, AfterContentChecked, Af
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   template: `
-        <h1>Welcome to {{title}}!</h1>
-        <button (click)="increment()">Increment</button>
-        <button (click)="decrement()">decrement</button>
-        <app-input [count]=Counter></app-input>` ,
+        <input [(ngModel)]=text>
+
+        <app-input [text]=text></app-input>` ,
 })
 // tslint:disable-next-line: max-line-length
 export class AppComponent implements OnInit, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
   constructor() {
   }
   title = 'hek';
-  Counter = 5;
+  text = 'Привет';
 
-  increment() {
-    this.Counter++;
-  }
-  decrement() {
-    this.Counter--;
-  }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('changes');
   }
