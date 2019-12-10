@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck } from '@angular/core';
+// tslint:disable-next-line: max-line-length
+import { Component, OnInit, Input, OnChanges, SimpleChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy } from '@angular/core';
 
 // tslint:disable-next-line: no-conflicting-lifecycle
 @Component({
